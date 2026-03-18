@@ -11,38 +11,42 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+
 import {
   LayoutDashboardIcon,
   ChartAreaIcon,
   UsersRoundIcon,
 } from "lucide-react";
 
-const data = {
-  user: {
-    name: "Your Profile Name",
-    email: "your-email-address",
-    avatar: "Your Avatar",
+import { useAuth } from "@/api/features/hooks/useAuth";
+
+const navItems = [
+  {
+    title: "Products",
+    url: "/dashboard/products",
+    icon: <LayoutDashboardIcon />,
   },
-  navMain: [
-    {
-      title: "Products",
-      url: "#",
-      icon: <LayoutDashboardIcon />,
-    },
-    {
-      title: "Brends",
-      url: "#",
-      icon: <ChartAreaIcon />,
-    },
-    {
-      title: "Employees",
-      url: "#",
-      icon: <UsersRoundIcon />,
-    },
-  ],
-};
+  {
+    title: "Brands",
+    url: "/dashboard/brands",
+    icon: <ChartAreaIcon />,
+  },
+  {
+    title: "Employees",
+    url: "/dashboard/employees",
+    icon: <UsersRoundIcon />,
+  },
+];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const { getMyProfile } = useAuth();
+
+  const user = {
+    name: getMyProfile.data?.name ?? "...",
+    email: getMyProfile.data?.email ?? "...",
+    avatar: "",
+  };
+
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
@@ -60,10 +64,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={navItems} />
       </SidebarContent>
-      <NavUser user={data.user} />
-      <SidebarFooter></SidebarFooter>
+      <SidebarFooter>
+        <NavUser user={user} />
+      </SidebarFooter>
     </Sidebar>
   );
 }
