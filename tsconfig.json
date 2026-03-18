@@ -16,11 +16,9 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "exactOptionalPropertyTypes": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "ignoreDeprecations": "6.0"
+    }
   },
   "include": ["src/**/*", "src/**/*.tsx", "src/**/*.ts"],
   "exclude": ["node_modules", "dist", "build"]
