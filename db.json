@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "password": "admin123"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro",
+      "image": "https://picsum.photos/seed/iphone/80/80",
+      "price": 1299,
+      "description": "Apple flagship smartphone"
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S24",
+      "image": "https://picsum.photos/seed/samsung/80/80",
+      "price": 999,
+      "description": "Samsung flagship smartphone"
+    },
+    {
+      "id": "3",
+      "name": "MacBook Pro 14",
+      "image": "https://picsum.photos/seed/macbook/80/80",
+      "price": 1999,
+      "description": "Apple professional laptop"
+    },
+    {
+      "id": "4",
+      "name": "Sony WH-1000XM5",
+      "image": "https://picsum.photos/seed/sony/80/80",
+      "price": 349,
+      "description": "Noise cancelling headphones"
+    },
+    {
+      "id": "5",
+      "name": "iPad Air",
+      "image": "https://picsum.photos/seed/ipad/80/80",
+      "price": 749,
+      "description": "Apple lightweight tablet"
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "name": "Apple",
+      "description": "American technology company"
+    },
+    {
+      "id": "2",
+      "name": "Samsung",
+      "description": "South Korean electronics giant"
+    },
+    {
+      "id": "3",
+      "name": "Sony",
+      "description": "Japanese multinational conglomerate"
+    },
+    {
+      "id": "4",
+      "name": "Dell",
+      "description": "American computer technology company"
+    },
+    {
+      "id": "5",
+      "name": "LG",
+      "description": "South Korean electronics manufacturer"
+    }
+  ],
+  "employees": [
+    {
+      "id": "1",
+      "name": "Ali Karimov",
+      "email": "ali@example.com",
+      "role": "Manager",
+      "salary": 2500
+    },
+    {
+      "id": "2",
+      "name": "Zulfiya Rahimova",
+      "email": "zulfiya@example.com",
+      "role": "Developer",
+      "salary": 2000
+    },
+    {
+      "id": "3",
+      "name": "Bobur Toshmatov",
+      "email": "bobur@example.com",
+      "role": "Designer",
+      "salary": 1800
+    },
+    {
+      "id": "4",
+      "name": "Malika Yusupova",
+      "email": "malika@example.com",
+      "role": "Marketing",
+      "salary": 1600
+    },
+    {
+      "id": "5",
+      "name": "Jasur Xoliqov",
+      "email": "jasur@example.com",
+      "role": "Sales",
+      "salary": 1500
+    }
+  ]
+}
